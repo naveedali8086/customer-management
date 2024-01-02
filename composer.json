@@ -1,0 +1,17 @@
+{
+    "name": "naveedali8086/customer-management",
+    "autoload": {
+        "psr-4": {
+            "Naveedali8086\\CustomerManagement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Naveed Ali",
+            "email": "naveedali8086@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/console": "^10.39"
+    }
+}
