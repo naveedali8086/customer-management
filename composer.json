@@ -1,5 +1,6 @@
 {
     "name": "naveedali8086/customer-management",
+    "description": "Minimal customer management scaffolding",
     "autoload": {
         "psr-4": {
             "Naveedali8086\\CustomerManagement\\": "src/"
@@ -12,6 +13,14 @@
         }
     ],
     "require": {
-        "illuminate/console": "^10.39"
+        "illuminate/console": "^10.39",
+        "illuminate/support": "^10.39"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Naveedali8086\\CustomerManagement\\CustomerManagementServiceProvider"
+            ]
+        }
     }
 }
