@@ -1,6 +1,6 @@
 {
     "name": "naveedali8086/customer-management",
-    "description": "Minimal customer management scaffolding",
+    "description": "Minimal customer management/CRUD scaffolding",
     "autoload": {
         "psr-4": {
             "Naveedali8086\\CustomerManagement\\": "src/"
