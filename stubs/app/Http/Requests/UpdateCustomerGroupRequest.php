@@ -23,7 +23,8 @@ class UpdateCustomerGroupRequest extends FormRequest
     {
         $customer_group = $this->route('customer_group');
         return [
-            'name' => 'required|max:255|unique:customer_groups,name,' . $customer_group->id
+            'name' => 'required|max:255|unique:customer_groups,name,' . $customer_group->id,
+            'description' => 'sometimes|nullable|max:255',
         ];
     }
 }

@@ -17,7 +17,8 @@ class CustomerGroupFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->name()
+            'name' => fake()->unique()->name(),
+            'description' => fake()->text(255)
         ];
     }
 }

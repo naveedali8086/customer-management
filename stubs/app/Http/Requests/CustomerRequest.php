@@ -47,21 +47,24 @@ class CustomerRequest extends FormRequest
     {
         return [
             function (Validator $validator) {
+
                 $contact_channel_value = $validator->getValue('contact_channel_value');
+                if ($contact_channel_value) {
+                    // checking if the 'channel_value' is unique or not.
+                    // If it is then raise validation error
+                    $contactAlreadyExists = Contact::query()
+                        ->where('channel_value', $contact_channel_value)
+                        ->where('contactable_type', Customer::class)
+                        ->exists();
 
-                // checking if the 'channel_value' is unique or not.
-                // If it is then raise validation error
-                $contactAlreadyExists = Contact::query()
-                    ->where('channel_value', $contact_channel_value)
-                    ->where('contactable_type', Customer::class)
-                    ->exists();
-
-                if ($contactAlreadyExists) {
-                    $validator->errors()->add(
-                        "contact_channel_value",
-                        "A customer with '$contact_channel_value' already exist"
-                    );
+                    if ($contactAlreadyExists) {
+                        $validator->errors()->add(
+                            "contact_channel_value",
+                            "A customer with '$contact_channel_value' already exist"
+                        );
+                    }
                 }
+
             }
         ];
     }

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('customer_groups', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('description')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

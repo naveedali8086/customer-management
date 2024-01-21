@@ -132,6 +132,7 @@ class CustomerGroupControllerTest extends TestCase
         $addCustomerAttrs = [
             'id',
             'name',
+            'description',
             'created_at',
             'updated_at'
         ];

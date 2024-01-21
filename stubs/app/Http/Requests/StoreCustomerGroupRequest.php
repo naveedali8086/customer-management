@@ -22,7 +22,8 @@ class StoreCustomerGroupRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|max:255|unique:customer_groups,name'
+            'name' => 'required|max:255|unique:customer_groups,name',
+            'description' => 'sometimes|nullable|max:255',
         ];
     }
 }
