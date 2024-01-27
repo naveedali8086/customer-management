@@ -26,8 +26,20 @@ class Customer extends Model
     /**
      * Get all the Customer's contacts
      */
+    /*
     public function contacts(): MorphMany
     {
         return $this->morphMany(Contact::class, 'contactable');
     }
+    */
+
+    /**
+     * Get all the Customer's addresses
+     */
+    /*
+    public function addresses(): MorphMany
+    {
+        return $this->morphMany(Address::class, 'addressable');
+    }
+    */
 }
