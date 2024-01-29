@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\ContactBelongsTo;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Http\Resources\CustomerCollection;
@@ -38,7 +39,8 @@ class CustomerController extends Controller
 
             $contactData = [
                 'channel' => $input['contact_channel'],
-                'channel_value' => $input['contact_channel_value']
+                'channel_value' => $input['contact_channel_value'],
+                'belongs_to' => ContactBelongsTo::CUSTOMER
             ];
 
             DB::beginTransaction();
