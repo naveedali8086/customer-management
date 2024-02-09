@@ -23,15 +23,17 @@ class Customer extends Model
         'note',
     ];
 
+    protected $casts = [
+        'enable_notification' => 'boolean'
+    ];
+
     /**
      * Get all the Customer's contacts
      */
-    /*
     public function contacts(): MorphMany
     {
         return $this->morphMany(Contact::class, 'contactable');
     }
-    */
 
     /**
      * Get all the Customer's addresses

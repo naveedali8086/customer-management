@@ -18,7 +18,7 @@ return new class extends Migration {
             // customer_code is unique. It can be used as per the use case i.e. for claiming loyalty.
             $table->string('customer_code')->unique()->nullable();
             // It determines if a customer can be sent marketing or promotion email,SMS,WhatsApp,...
-            $table->unsignedTinyInteger('enable_notification');
+            $table->unsignedTinyInteger('enable_notification')->default(0);
             $table->date('date_of_birth')->nullable();
             $table->string('gender', 5); // M,F,Other
             $table->string('gender_other')->nullable();
