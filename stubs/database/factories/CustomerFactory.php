@@ -22,7 +22,7 @@ class CustomerFactory extends Factory
             'middle_name' => fake()->randomElement([fake()->firstName(), null]),
             'last_name' => fake()->lastName(),
             'customer_code' => fake()->unique()->bothify('??????##'),
-            'enable_notification' => fake()->boolean(),
+            'enable_notification' => fake()->randomElement([fake()->boolean(), null]),
             'date_of_birth' => fake()->dateTimeBetween('-60 years', '-18 years')->format('Y-m-d'),
             'gender' => fake()->randomElement(['M', 'F', 'Other']),
             // It will be overridden based on "gender's" attribute value in configure() hook below
