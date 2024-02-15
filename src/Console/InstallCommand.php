@@ -4,6 +4,7 @@ namespace Naveedali8086\CustomerManagement\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\File;
 
 class InstallCommand extends Command
 {
@@ -32,7 +33,8 @@ class InstallCommand extends Command
         $fileSystem->copyDirectory(__DIR__ . '/../../stubs/database/seeders', base_path('database/seeders'));
 
         // copy migrations
-        $fileSystem->copyDirectory(__DIR__ . '/../../stubs/database/migrations', base_path('database/migrations'));
+        $files = File::glob(__DIR__ . '/../../stubs/database/migrations/*.php');
+        copy_migrations(database_path('migrations'), $files);
 
         // Copy policies
         $fileSystem->ensureDirectoryExists(app_path('Policies'));

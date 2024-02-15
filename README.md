@@ -97,7 +97,7 @@ php artisan test tests/Feature/CustomerControllerTest.php
 php artisan test tests/Feature/ContactControllerTest.php
 php artisan test tests/Feature/AddressControllerTest.php
 ```
-P.S. You can run all the tests in one go using <br> `php artisan test path/to/FirstTest.php path/to/SecondTest.php` <br>
+P.S. Or run all the tests in one go using <br> `php artisan test tests/Feature/CustomerGroupControllerTest.php tests/Feature/CustomerControllerTest.php tests/Feature/ContactControllerTest.php tests/Feature/AddressControllerTest.php` <br>
 and so.  
 
 ### Questions?

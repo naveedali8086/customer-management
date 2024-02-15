@@ -129,7 +129,7 @@ class CustomerGroupControllerTest extends TestCase
 
     private function getCustomerGroupAttributes(array $except = []): array
     {
-        $addCustomerAttrs = [
+        $attrs = [
             'id',
             'name',
             'description',
@@ -137,6 +137,6 @@ class CustomerGroupControllerTest extends TestCase
             'updated_at'
         ];
 
-        return array_diff($addCustomerAttrs, $except);
+        return array_diff($attrs, $except);
     }
 }
