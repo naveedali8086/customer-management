@@ -9,7 +9,9 @@ Also, if you have any other model/entity in your app that is contactable or addr
 the contact or address related fields in that entity, controller, formRequests and so on. All you have to do is just add 
 a new case in `App\Enums\ContactBelongsTo` as well as in `getContactParentModelClass()` method of this enum that represent 
 your model/entity (once you look at how Customer Entity is defined in this enum, you would have clear understanding about 
-how to add new entities) , and you are good to go. And same goes for the address entity. 
+how to add new entities) , and you are good to go. And same goes for the address entity. And yes, once you add your new 
+parent model that would have contacts or addresses, do not forget to add contacts() and addresses() relationship method 
+in that model (see Customer model as a concrete example).
 
 ### Entities
 
