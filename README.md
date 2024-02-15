@@ -17,8 +17,6 @@ It publishes controllers, models, formRequests, resources, migrations, factories
 | updated_at   | timestamp | No <br>(handled by Laravel)  |                                                                                                                                |
 | deleted_at   | timestamp | No <br>(handled by Laravel)  |                                                                                                                                |
 
-<br>
-
 #### Customer
 | Attribute           | Type      | Required                     | Description                                                        |
 |---------------------|-----------|------------------------------|--------------------------------------------------------------------|
@@ -36,8 +34,6 @@ It publishes controllers, models, formRequests, resources, migrations, factories
 | updated_at          | timestamp | No <br>(handled by Laravel)  |                                                                    |
 | deleted_at          | timestamp | No <br>(handled by Laravel)  |                                                                    |
 
-<br>
-
 #### Contact
 | Attribute        | Type      | Required                    | Description                                                                                                                                                                                                                                                                                                                                                                                               |
 |------------------|-----------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,8 +47,6 @@ It publishes controllers, models, formRequests, resources, migrations, factories
 | created_at       | timestamp | No <br>(handled by Laravel) |                                                                                                                                                                                                                                                                                                                                                                                                           |
 | updated_at       | timestamp | No <br>(handled by Laravel) |                                                                                                                                                                                                                                                                                                                                                                                                           |
 | deleted_at       | timestamp | No <br>(handled by Laravel) |                                                                                                                                                                                                                                                                                                                                                                                                           |
-
-<br>
 
 #### Address
 | Attribute               | Type      | Required                    | Description                                                                                                                                                                                                                                                               |
@@ -104,6 +98,8 @@ defined in them. It means that the `Contact` entity may belong to multiple paren
 a Customer, Supplier, Doctor, Patient etc. If you added new parent for a `Contact` entity, it must be defined in as a 
 new case of in `App\Enums\ContactBelongsTo` as well as in `getContactParentModelClass()` method of this enum. And same 
 goes for the address entity.
+
+Also, if address-management package was installed, please uncomment addresses() relationship method in defined in Customer model. 
 
 <br>
 Step 3:
