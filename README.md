@@ -3,14 +3,14 @@
 This package provides a minimal customer management / CRUD scaffolding, in which a `Customer` entity: <br>- belongsTo 
 an optional `CustomerGroup` entity <br>- morphMany `Contact` entity as well as <br>- optional morphMany `Address` entity.
 
-It publishes controllers, models, formRequests, resources, migrations, factories, test cases for CustomerGroup, Customer, Contact and optional Address resources to your application that can be easily customized based on your own application's needs.
+It publishes controllers, models, formRequests, eloquent's resource classes, migrations, factories, test cases for CustomerGroup, Customer, Contact and optional Address resources to your application that can be easily customized based on application's needs.
 
 Also, if you have any other model/entity in your app that is contactable or addressable, you do not need to redefine
 the contact or address related fields in that entity, controller, formRequests and so on. All you have to do is just add 
 a new case in `App\Enums\ContactBelongsTo` as well as in `getContactParentModelClass()` method of this enum that represent 
 your model/entity (once you look at how Customer Entity is defined in this enum, you would have clear understanding about 
 how to add new entities) , and you are good to go. And same goes for the address entity. And yes, once you add your new 
-parent model that would have contacts or addresses, do not forget to add contacts() and addresses() relationship method 
+parent model that would have contacts or addresses, do not forget to add `contacts()` and `addresses()` relationship method 
 in that model (see Customer model as a concrete example).
 
 ### Entities
