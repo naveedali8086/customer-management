@@ -3,7 +3,7 @@
 This package provides a minimal customer management / CRUD scaffolding, in which a `Customer` entity: <br>- belongsTo 
 an optional `CustomerGroup` entity <br>- morphMany `Contact` entity as well as <br>- optional morphMany `Address` entity.
 
-It publishes controllers, models, formRequests, resources, migrations, factories, test cases for CustomerGroup, Customer, Contact and optional Address resources to your application that can be easily customized based on your own application's needs.
+It publishes controllers, models, formRequests, eloquent's resource classes, migrations, factories, test cases for CustomerGroup, Customer, Contact and optional Address resources to your application that can be easily customized based on your own application's needs.
 
 Also, if you have any other model/entity in your app that is contactable or addressable, you do not need to redefine
 the contact or address related fields in that entity, controller, formRequests and so on. All you have to do is just add 
