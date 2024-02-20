@@ -13,20 +13,13 @@
         "php": "^8.1.0",
         "illuminate/console": "^10.39",
         "illuminate/support": "^10.39",
-        "illuminate/filesystem": "^10.41",
-        "naveedali8086/laravel-helpers": "@dev"
+        "illuminate/filesystem": "^10.41"
     },
     "autoload": {
         "psr-4": {
             "Naveedali8086\\CustomerManagement\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "D:\\laragon\\www\\naveedali8086\\laravel-helpers"
-        }
-    ],
     "extra": {
         "laravel": {
             "providers": [
