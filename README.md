@@ -81,13 +81,13 @@ in that model (see Customer model as a concrete example).
 ## How to install
 Step 1:
 ```
-composer require naveedali8086/customer-management
-composer require naveedali8086/contact-management
+composer require naveedali8086/customer-management --dev
+composer require naveedali8086/contact-management --dev
 ```
 
 (Optional: include following package if you want to have address(es) for a customer entity)
 ```
-composer require naveedali8086/address-management 
+composer require naveedali8086/address-management --dev 
 ```
 <br>
 Step 2:
